@@ -9,6 +9,7 @@
         <module>model</module>
         <module>service</module>
         <module>service/service_user</module>
+        <module>service/service_hosp</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -45,7 +46,7 @@
             <artifactId>spring-cloud-dependencies</artifactId>
             <version>${cloud.version}</version>
             <type>pom</type>
-            <scope>import</scope>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
@@ -53,7 +54,7 @@
             <artifactId>spring-cloud-alibaba-dependencies</artifactId>
             <version>${alibaba.version}</version>
             <type>pom</type>
-            <scope>import</scope>
+            <scope>compile</scope>
         </dependency>
 
         <!--mybatis-plus 持久层-->
@@ -122,6 +123,18 @@
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>${jodatime.version}</version>
+        </dependency>
+
+        <!--lombok用来简化实体类：需要安装lombok插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!--    mongodb-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+            <scope>provided </scope>
         </dependency>
     </dependencies>
 <!--    </dependencyManagement>-->
